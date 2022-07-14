@@ -5,8 +5,10 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import KevinsThings from './pages/KevinsThings/KevinsThings'
 import Landing from './pages/Landing/Landing'
 import RachelsThings from './pages/RachelsThings/RachelsThings'
+import MythicalThings from './pages/MythicalThings/MythicalThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -129,6 +131,20 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
+  
+  const [kevinsThings, setKevinsThings] = useState([
+    {
+      name: 'Fishing',
+      image: 'https://i.imgur.com/gRxOxsA.jpg',
+      attributes: [
+        'Water',
+        'Bait',
+        'Fish',
+        'Boat',
+      ],
+    },
+  ])
+
 
   const [rachelsThings, setRachelsThings] = useState([
     {
@@ -138,6 +154,16 @@ const App = () => {
     },
   ])
 
+
+  const [berylsThings, setBerylsThings] = useState([
+    {
+      name: 'goblin',
+      image:
+        'https://images.unsplash.com/photo-1589302722335-ba4876f6a137?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+      attributes: ['brave', 'misunderstood', 'hungry', 'dehydrated'],
+    }
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -145,6 +171,10 @@ const App = () => {
       <Route
         path="/the-functional-things"
         element={<FunctionalThings things={shahzadsThings} />}
+      />
+      <Route
+        path="/the-kevins-things"
+        element={<KevinsThings things={kevinsThings} />}
       />
       <Route
         path="/the-manliest-things"
@@ -161,6 +191,10 @@ const App = () => {
       <Route
         path="/rachels-things"
         element={<RachelsThings things={rachelsThings} />}
+       />
+      <Route
+        path="/the-mythical-things"
+        element={<MythicalThings things={berylsThings} />}
       />
     </Routes>
   )
