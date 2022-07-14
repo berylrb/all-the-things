@@ -7,6 +7,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
 import RachelsThings from './pages/RachelsThings/RachelsThings'
+import MythicalThings from './pages/MythicalThings/MythicalThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -130,12 +131,23 @@ const App = () => {
     },
   ])
 
+
   const [rachelsThings, setRachelsThings] = useState([
     {
       name: 'hiking',
       image: 'https://imgs.xkcd.com/comics/hiking.png',
       attributes: ['sweaty', 'endorphins'],
     },
+  ])
+
+
+  const [berylsThings, setBerylsThings] = useState([
+    {
+      name: 'goblin',
+      image:
+        'https://images.unsplash.com/photo-1589302722335-ba4876f6a137?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+      attributes: ['brave', 'misunderstood', 'hungry', 'dehydrated'],
+    }
   ])
 
   return (
@@ -161,6 +173,10 @@ const App = () => {
       <Route
         path="/rachels-things"
         element={<RachelsThings things={rachelsThings} />}
+       />
+      <Route
+        path="/the-mythical-things"
+        element={<MythicalThings things={berylsThings} />}
       />
     </Routes>
   )
