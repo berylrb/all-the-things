@@ -141,6 +141,7 @@ const App = () => {
         'Bait',
         'Fish',
         'Boat',
+        'I fish on the chatahoochee river for some trout!!',
       ],
     },
   ])
