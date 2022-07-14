@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import KevinsThings from './pages/KevinsThings/KevinsThings'
 import Landing from './pages/Landing/Landing'
 import RachelsThings from './pages/RachelsThings/RachelsThings'
 import MythicalThings from './pages/MythicalThings/MythicalThings'
@@ -130,6 +131,19 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ])
+  
+  const [kevinsThings, setKevinsThings] = useState([
+    {
+      name: 'Fishing',
+      image: 'https://i.imgur.com/gRxOxsA.jpg',
+      attributes: [
+        'Water',
+        'Bait',
+        'Fish',
+        'Boat',
+      ],
+    },
+  ])
 
   const [rachelsThings, setRachelsThings] = useState([
     {
@@ -156,6 +170,10 @@ const App = () => {
       <Route
         path="/the-functional-things"
         element={<FunctionalThings things={shahzadsThings} />}
+      />
+      <Route
+        path="/the-kevins-things"
+        element={<KevinsThings things={kevinsThings} />}
       />
       <Route
         path="/the-manliest-things"
